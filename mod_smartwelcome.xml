@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.2" type="module" client="site" method="upgrade">
+	<name>MOD_CONTENT_WELCOME</name>
+	<author>Adisak Chaiyakul</author>
+	<creationDate>11/6/2015</creationDate>
+	<copyright>Copyright 2015 Adisak Chaiyakul. All rights Reserved</copyright>
+	<license>GNU/GPU</license>
+	<authorEmail>adisakchaiyakul@gmail.com</authorEmail>
+	<authorUrl>www.joomla.org</authorUrl>
+	<version>1.0.0</version>
+	<description>MOD_WELLCOME_DESCRIPTION</description>
+	<files>
+		<filename plugin="mod_smart_welcome">mod_smartwelcome.php</filename>
+		<filename>index.html</filename>
+		<folder>helper</folder>
+		
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB.mod_content_welcome.ini</language>
+		<language tag="en-GB">language/en-GB.mod_content_welcome.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic"   addfieldpath="/administrator/components/com_content/models/fields">
+				<field 
+					name="visit_count"
+					type="text"
+					default="0"
+					required="true"
+					
+					label="MOD_WELCOME_VISIT_LABEL"
+				/>
+				<field
+					name="welcome_message"
+					type="textarea"
+					default="MOD_WELCOME_DEFAULT_MESSAGE"
+					
+					label="MOD_WELCOME_MESSAGE_LABEL">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+			</fieldset>
+			<fieldset name="test" label="advanced">
+			
+				<field
+					name="layout"
+					type="mod_layout"
+					
+					
+					label="MOD_WELCOME_LAYOUT"
+					description="MOD_LAYOUT_DESC"
+				/>
+				<field 
+					name="moduleclass_sfx"
+					type="textarea"
+					rows="3"
+					label="MOD_CLASS_SFX"
+					description="MOD_CLASS_SFX_DESC"
+				/>
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>
