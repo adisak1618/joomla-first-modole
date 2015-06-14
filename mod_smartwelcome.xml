@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="3.2" type="module" client="site" method="upgrade">
+<extension  type="module" version="3.2" client="site" method="upgrade">
 	<name>MOD_CONTENT_WELCOME</name>
 	<author>Adisak Chaiyakul</author>
 	<creationDate>11/6/2015</creationDate>
@@ -10,18 +10,19 @@
 	<version>1.0.0</version>
 	<description>MOD_WELLCOME_DESCRIPTION</description>
 	<files>
-		<filename plugin="mod_smart_welcome">mod_smartwelcome.php</filename>
+		<filename module="mod_smartwelcome">mod_smartwelcome.php</filename>
 		<filename>index.html</filename>
 		<folder>helper</folder>
+		<folder>tmpl</folder>
 		
 	</files>
 	<languages>
-		<language tag="en-GB">language/en-GB.mod_content_welcome.ini</language>
-		<language tag="en-GB">language/en-GB.mod_content_welcome.sys.ini</language>
+		<language tag="en-GB">languages/en-GB.mod_content_welcome.ini</language>
+		<language tag="en-GB">languages/en-GB.mod_content_welcome.sys.ini</language>
 	</languages>
 	<config>
 		<fields name="params">
-			<fieldset name="basic"   addfieldpath="/administrator/components/com_content/models/fields">
+			<fieldset name="basic"   >
 				<field 
 					name="visit_count"
 					type="text"
@@ -35,17 +36,15 @@
 					type="textarea"
 					default="MOD_WELCOME_DEFAULT_MESSAGE"
 					
-					label="MOD_WELCOME_MESSAGE_LABEL">
-					<option value="0">JNO</option>
-					<option value="1">JYES</option>
-				</field>
+					label="MOD_WELCOME_MESSAGE_LABEL"
+					/>
 
 			</fieldset>
-			<fieldset name="test" label="advanced">
+			<fieldset name="advanced" label="advanced">
 			
 				<field
 					name="layout"
-					type="mod_layout"
+					type="module_layout"
 					
 					
 					label="MOD_WELCOME_LAYOUT"
